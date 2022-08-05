@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" type="text/css">
+    <title>Steam Clone</title>
+</head>
+
+<body>
+    <header>
+        <img id="header-img"
+            src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="">
+        <ul>
+            <li>
+                <a href="#">STORE</a>
+                <ul class="sub-menu sub-menu-str">
+                    <li><a onclick="renderGames()" href="#">Home</a></li>
+                    <li><a href="#">Discovery</a></li>
+                    <li><a href="#">List Wish List</a></li>
+                    <li><a href="#">Point Shop</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Statitics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">COMMUNITY</a>
+                <ul class="sub-menu sub-menu-com">
+                    <li><a href="#">Welcome</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">WorkShop</a></li>
+                    <li><a href="#">Market</a></li>
+                    <li><a href="#">Broadcarts</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SUPPORT</a></li>
+        </ul>
+        <ul class="header-menu-right">
+            <li><a target="_blank" href="https://store.steampowered.com/about/">Install Steam <i class="fa-solid fa-down"></i></a></li>
+            <li><a href="#">login</a></li>
+            <li>
+                <a href="#">language 
+                    <i class="fa-solid fa-sort-down"></i>
+                </a>
+                <ul class="sub-menu sub-menu-lang">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">VietNamese</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <nav id="genres-list" >
+            <img src="https://store.akamai.steamstatic.com/public/images//gift/steamcards_promo_02.png" alt="">
+            <div class="input">
+                <input id="nav-search" type="text" placeholder="Search...">
+                <a href="#"><i class="fa-solid fa-magnifying-glass search-btn"></i></a>
+            </div>
+            <div id="game-type">
+                <li ><a onclick="getGamesByGenres()" class="btn-game-type"  ></a></li>
+            </div>
+        </nav>
+        <div class="error-message">Loading...</div>
+        
+        <div class="content" id="content">
+            <div class="banner">
+                <ul>
+                    <li><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1294760/header_292x136.jpg?t=1656172191" alt=""></li>
+                    <li><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1408230/header_292x136_alt_assets_5.jpg?t=1659026157" alt=""></li>
+                    <li><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1683340/header_292x136.jpg?t=1658913814" alt=""></li>
+                    <li><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/611670/header_292x136.jpg?t=1564002443" alt=""></li>
+                    <button><i onclick="renderGames()" class="fa-solid fa-arrow-left"></i></button>
+                </ul>
+            </div>
+            <div>
+                <div id=232 onClick="getGamesByClick(this)" class="game-wrraper">
+                    <div class="cover">
+                        <img src="https://steamcdn-a.akamaihd.net/steam/apps/730/header.jpg?t=1554409309"
+                            alt="">
+                        <div class="game-info">
+                            <p>Counter-Strike: Global Offensive</p>
+                            <p>0$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="btn-nav-pages">
+                <button value="1" onclick="getGamesByPage(this)" class="btn-nav-page">1</button>
+                <button value="2" onclick="getGamesByPage(this)" class="btn-nav-page">2</button>
+                <button value="3" onclick="getGamesByPage(this)" class="btn-nav-page">3</button>
+                <button class="btn-nav-page">...</button>
+                <input id="nav-search-page" type="text" placeholder="Search...">
+                <input id="nav-search-click" type="text" placeholder="Search...">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <div class="img-list">
+                <img src="https://store.akamai.steamstatic.com/public/images/footerLogo_valve_new.png" alt="">
+                <img src="https://store.akamai.steamstatic.com/public/images/v6/logo_steam_footer.png" alt="">
+            </div>
+            <div class="footer-info">
+                <p>© 2022 Valve Corporation. All rights reserved. All trademarks are the property of their owners in the
+                    United States and other countries.</p>
+                <p>VAT included for all prices (where applicable).</p>
+            </div>
+            <div class="footer-contact">
+                <ul>
+                    <li ><a target="_blank" 
+                        href="https://www.valvesoftware.com/fr/">About Valve</a></li>
+                    <li><a target="_blank" 
+                        href="https://www.valvesoftware.com/fr/">Jobs</a></li>
+                    <li><a target="_blank" 
+                        href="https://partner.steamgames.com/">Steamworks</a></li>
+                    <li><a target="_blank" 
+                        href="https://partner.steamgames.com/steamdirect">Steam distribution</a></li>
+                    <li><a target="_blank" 
+                        href="https://help.steampowered.com/fr/?snr=1_44_44_">Support</a></li>
+                    <li><a target="_blank" 
+                        href="https://store.steampowered.com/digitalgiftcards/">Gift cards</a></li>
+                    <li><a target="_blank" 
+                        href="https://www.facebook.com/Steam">Steam FB</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js.js"></script>
+</body>
+
+</html>
