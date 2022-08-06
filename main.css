@@ -1,0 +1,448 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #171a21;
+}
+
+.error-message {
+    display: none;
+    position: fixed;
+    align-items: center;
+    background-color: #171a21;
+    width: 150px;
+    height: 150px;
+    color: #305d8a;
+    padding: 10px;
+    font-size: 25px;
+    top: 25%;
+    left: 50%;
+    z-index: 999;
+    border: none;
+    border-radius: 50%;
+    transform: rotate(350deg);
+}
+
+header {
+    position: fixed;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 101.1%;
+    height: 90px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: #171A21;
+    align-items: center;
+    z-index: 999;
+}
+
+header>ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+
+
+header>ul>li>a {
+    text-decoration: none;
+    color: #C6D4DF;
+    font-size: 24px;
+    margin-left: 20px;
+
+}
+
+header>ul>li {
+    position: relative;
+}
+
+.header-menu-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#header-img {
+    position: relative;
+    left: 30px;
+}
+
+header>ul>li>a:hover {
+    filter: brightness(150%);
+}
+
+header .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    background-color: #171A21;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    line-height: 24px;
+    font-size: 16px;
+    text-transform: uppercase;
+    z-index: 999;
+
+}
+
+header li {
+    transition: all 0.2s linear;
+}
+
+header li .sub-menu-str,
+header li .sub-menu-com,
+header li .sub-menu-lang {
+    display: none;
+}
+
+header .sub-menu li a {
+    text-decoration: none;
+    color: #C6D4DF;
+}
+
+header li .sub-menu-lang {
+    color: #fff;
+    font-size: 16px;
+    text-transform: none;
+}
+
+header .sub-menu li a:hover {
+    filter: brightness(150%);
+}
+
+header li:hover .sub-menu-str,
+header li:hover .sub-menu-com,
+header li:hover .sub-menu-lang {
+    display: block;
+
+}
+
+
+
+.header-menu-right>li {
+    margin-top: -10px;
+    right: 30px;
+}
+
+.header-menu-right li a {
+    font-size: 18px;
+}
+
+.header-menu-right>li:first-child {
+    background-color: #5c7e10;
+    padding-right: 15px;
+}
+
+
+.header-menu-right li:nth-child(2) {
+
+    border-right: 1px solid #fff;
+}
+
+.header-menu-right li:nth-child(2) a {
+    padding-right: 20px;
+}
+
+/* END OF  HEADER */
+/* BEGIN OF NAV  */
+main {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    top: 90px;
+    left: -8px;
+    background: url('https://store.steampowered.com/public/images/v6/colored_body_top.png?v=2') center top no-repeat #1b2838;
+    width: 101.1%;
+    height: auto;
+    min-height: 1200px;
+    max-height: 2000px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #66C0F4;
+    width: 25%;
+    padding: 30px;
+}
+
+nav input {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 77.5%;
+    font-size: 28px;
+    line-height: 30px;
+    background-color: #305d8a;
+    border: 1px solid #305d8a;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+nav input:focus {
+
+    outline: none;
+}
+
+nav input:hover {
+    border: 1px solid #fff;
+}
+
+nav .input {
+    position: relative;
+}
+
+nav .input a {
+    position: absolute;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 34px;
+    border: none;
+    border-radius: 3px;
+    top: 20px;
+    right: 10px;
+    background: url('https://store.steampowered.com/public/images/v6/home/background_spotlight.jpg');
+}
+
+nav .input a {
+    color: #fff;
+    font-size: 28px;
+}
+
+nav .input a:hover {
+    filter: brightness(110%);
+}
+
+
+nav ul li:hover {
+    filter: brightness(200%);
+    background: url('https://store.steampowered.com/public/images/v6/home/background_spotlight.jpg');
+
+}
+
+.btn-game-type {
+    display: flex;
+    flex-shrink: 1;
+    justify-content: flex-end;
+    align-self: center;
+    text-decoration: none;
+    border: none;
+    width: 200px;
+    font-size: 24px;
+    line-height: 35px;
+    list-style: none;
+    color: #305d8a;
+    background: inherit;
+
+}
+
+.btn-game-type:hover {
+    background: url('https://store.steampowered.com/public/images/v6/home/background_spotlight.jpg');
+
+}
+
+
+
+
+#content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
+    margin-top: 30px;
+    margin-left: 70px;
+    justify-content: center;
+
+}
+
+.banner {
+    width: 1000px;
+    height: 160px;
+}
+
+.banner ul {
+    /* position: relative; */
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 100px;
+
+}
+
+.banner ul li img {
+    width: 190px;
+    margin-right: 10px;
+}
+
+.banner button {
+    height: 89px;
+    background-color: #305d8a;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.content>div:nth-child(2) {
+    position: absolute;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    top: 150px;
+}
+
+.content .game-wrraper {
+    width: 250px;
+    min-height: 200px;
+    margin: 10px;
+    border: 1px solid #1b2838;
+    background: url('https://store.steampowered.com/public/images/v6/home/background_spotlight.jpg');
+    transition: all 0.1s linear;
+    filter: contrast(0.7);
+    cursor: pointer;
+}
+
+.content .game-wrraper:hover {
+    transform: scale(1.1, 1.1);
+    filter: contrast(1);
+}
+
+.content .cover {
+    height: 185px;
+}
+
+.content .game-wrraper img {
+    width: 100%;
+}
+
+.content .game-wrraper .game-info,
+.content .cover-click>p {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    color: #acdbf5;
+}
+
+.content .btn-nav-pages {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 900px;
+    left: 470px;
+
+
+}
+
+.content .btn-nav-pages .btn-nav-page {
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    color: #171A21;
+    background-color: #305d8a;
+    margin-left: 5px;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.content .btn-nav-pages .btn-nav-page:hover {
+    filter: brightness(120%);
+}
+
+.content .game-wrraper-click {
+    width: 500px;
+    min-height: 150px;
+    margin: 10px;
+    border: 1px solid #1b2838;
+    background: url('https://store.steampowered.com/public/images/v6/home/background_spotlight.jpg');
+    transition: all 0.1s linear;
+    cursor: pointer;
+}
+
+.content .cover-click {
+    height: 370px;
+}
+
+.content .game-wrraper-click img {
+    width: 100%;
+}
+
+.content .game-wrraper-click .game-info-click {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    color: #acdbf5;
+}
+
+#nav-search-page,
+#nav-search-click {
+    display: none;
+}
+
+footer {
+    position: relative;
+    left: -8px;
+    width: 101.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #171a21;
+}
+
+footer .img-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+footer .footer-info {
+    margin-left: 20px;
+    margin-right: 50px;
+    color: #C6D4DF;
+
+}
+
+footer .footer-contact ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .footer-contact li {
+    list-style: none;
+    margin-left: 30px;
+    padding-right: 30px;
+    border-right: 1px solid #fff;
+}
+
+footer .footer-contact a {
+    text-decoration: none;
+    color: #C6D4DF;
+}
+
+footer .footer-contact a:hover {
+    filter: brightness(150%);
+}
